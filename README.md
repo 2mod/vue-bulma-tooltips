@@ -83,12 +83,14 @@ Initiate the directive in your `main.js` or `index.js` before the Vue instance i
 ```javascript
 import Vue from 'vue'
 import bulma from 'bulma'
-import bulmaToolTip from 'bulma-tooltip'
+import 'bulma-tooltip'
 
 import vueBulmaToolTips from 'vue-bulma-tooltips'
 vueBulmaToolTips.init(Vue)
 
-new Vue({//...
+new Vue({
+  bulma,
+//...
 ```
 
 
