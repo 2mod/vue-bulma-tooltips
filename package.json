@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Simple low weight custom Vue directive for the Bulma ToolTip extension",
   "main": "index.js",
+  "module": "./dist/vue-bulma-tooltips.min.js",
+  "unpkg": "./dist/vue-bulma-tooltips.sa.js",
   "dependencies": {
     "vue": "^2.5.17",
     "bulma": "^0.7.1"
