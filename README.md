@@ -6,7 +6,7 @@ Simple low weight custom Vue directive for the Bulma ToolTip extension
 
 
 # Demo
-[./public/demo.html](./public/demo.html)
+[./public/demo.html](https://jsbin.com/tuxefanali)
 
 
 # Built for VueJS and Bulma
