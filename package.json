@@ -1,6 +1,6 @@
 {
   "name": "vue-bulma-tooltips",
-  "version": "1.0.0",
+  "version": "1.0.0B",
   "description": "Simple low weight custom Vue directive for the Bulma ToolTip extension",
   "main": "index.js",
   "dependencies": {
