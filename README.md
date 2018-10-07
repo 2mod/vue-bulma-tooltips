@@ -116,7 +116,7 @@ Now the `v-ttip` directive can be used wherever needed:
 
 ## Modifiers
 Generally available modifiers are exposed in `vueBulmaToolTips.modifiers` object.
-Basically they cover all possible CSS classes according to the CSS Documentation:
+Basically they cover all possible CSS classes according to the [CSS Documentation](https://wikiki.github.io/elements/tooltip/):
 ```javascript
 <button v-ttip.bottom.info="'This is a button'"> Button </button>
 ```
