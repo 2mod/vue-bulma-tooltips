@@ -1,0 +1,78 @@
+{
+  "name": "vue-bulma-tooltips",
+  "version": "1.0.0",
+  "description": "Simple low weight custom Vue directive for the Bulma ToolTip extension",
+  "main": "index.js",
+  "dependencies": {
+    "vue": "^2.5.17",
+    "bulma": "^0.7.1"
+  },
+  "devDependencies": {
+    "bulma-tooltip": "^2.0.2",
+    "@vue/cli-plugin-babel": "^3.0.3",
+    "@vue/cli-plugin-eslint": "^3.0.3",
+    "@vue/cli-plugin-unit-mocha": "^3.0.3",
+    "@vue/cli-service": "^3.0.3",
+    "@vue/eslint-config-standard": "^3.0.3",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "vue-template-compiler": "^2.5.17",
+    "@babel/core": "^7.1.0",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.5.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^5.6.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^4.7.1",
+    "sass-lint": "^1.12.1",
+    "sass-loader": "^7.1.0",
+    "node-sass": "^4.9.3",
+    "mocha": "^5.2.0",
+    "chai": "^4.1.2",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.0.8"
+  },
+  "scripts": {
+    "lint": "vue-cli-service lint",
+    "test": "npm run lint && npm run build && vue-cli-service test:unit ./tests/**/*.test.js",
+    "test:dev": "npm run lint && vue-cli-service test:unit ./tests/**/dev.test.js",
+    "test:prod": "vue-cli-service test:unit ./tests/**/prod.test.js",
+    "build": "npm run del:dist && webpack --mode production --progress",
+    "build:dev": "npm run del:dist && webpack --mode development --progress",
+    "cleanup": "npm run del:cache && npm run del:logs",
+    "del:dist": "rm -fr ./dist/*",
+    "del:cache": "rm -fr ./v8-compile-cache-*",
+    "del:logs": "rm -f ./npm-debug.log",
+    "help:cli": "vue-cli-service --help",
+    "help:cli:test": "vue-cli-service test:unit --help",
+    "help:webpack": "webpack --help"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2mod/vue-bulma-tooltips.git"
+  },
+  "keywords": [
+    "js",
+    "vue",
+    "vuejs",
+    "bulma",
+    "bulma-tooltip",
+    "tooltip",
+    "tool-tip",
+    "directive"
+  ],
+  "author": {
+    "name": "2mod",
+    "url": "https://github.com/2mod"
+  },
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/2mod/vue-bulma-tooltips/issues",
+    "file": "./ISSUES.md"
+  },
+  "homepage": "https://github.com/2mod/vue-bulma-tooltips#readme"
+}

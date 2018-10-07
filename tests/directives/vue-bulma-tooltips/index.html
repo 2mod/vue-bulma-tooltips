@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<title>Test - vue-bulma-tooltips</title>
+
+<head>
+  <meta charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../node_modules/bulma/css/bulma.min.css">
+  <link rel="stylesheet" href="../../../node_modules/bulma-tooltip/dist/css/bulma-tooltip.min.css">
+
+  <script src="../../../node_modules/vue/dist/vue.min.js"></script>
+  
+</head>
+
+<body>
+
+	<style>
+		html {
+			background-color: #35495e;
+		}
+		.test {
+			width: 345px;
+			margin: 42px;
+			background-color: #41b883;
+			text-decoration-color: #35495e;
+		}
+		.test span {
+			background-color: #35495e;
+		}
+	</style>
+
+	<center>
+		<div id="test"></div>
+	</center>
+
+  <script src="../../../dist/vue-bulma-tooltips.sa.js"></script>
+  <script>
+  
+		saVueBulmaToolTips.default.init(Vue)
+
+    new Vue({
+
+      el: '#test',
+
+      template: `
+				<div class="test box">
+				
+					<h1 class="title"
+						v-ttip.left.multiline.info="ttipTitle">
+						vue-bulma-tooltips
+					</h1>
+
+					<span class="box">
+						<button v-ttip="'This is an actual button'">
+							Button
+						</button>
+					</span>
+
+					<span class="box" style="background-color:yellow;"
+						v-ttip.right.danger.active="'This is not a DIV'">
+					</span>
+
+					<span class="box">
+						<a href="https://github.com/2mod/vue-bulma-tooltips"
+							class="button"
+							v-ttip.left.warning="'This is a GitHub link'">
+							GitHub
+						</a>
+					</span>
+
+        </div>
+			`,
+			
+			data() {
+				return {
+
+					ttipTitle: (() => {
+						const melody = []
+						const greg = {
+							vocab: [
+								'if your a coder and you know it', 
+								'write some code',
+								'and you really want to show it'
+							],
+							sound: [
+								' *type*type* ',
+								' *click*click* ',
+								'',
+								' *swipe*bash* '
+							],
+							punct: [', ', '! '],
+							rythm: ['01010201', '01011101']
+						}
+						greg.rythm[0].split('').forEach((v,i) => {
+							melody.push(greg.vocab[v])
+							melody.push(
+								greg.punct[greg.rythm[1].charAt(i)]
+							)
+							if( ((i+1) % 2) === 0 ) {
+								melody.push(greg.sound[((i+1)/2)-1])
+							}
+						})
+						return melody.join('')
+					})()
+
+				}
+			}
+
+    })
+  
+  </script>
+
+</body>
+
+</html>
